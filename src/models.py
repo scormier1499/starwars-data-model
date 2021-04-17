@@ -8,6 +8,7 @@ from eralchemy import render_er
 
 Base = declarative_base()
 
+
 # Define association tables to create a many to many for the favorites
 favorites_people = Table('user_people', Base.metadata,
     Column('user_id', Integer, ForeignKey('users.id')),
