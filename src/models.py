@@ -8,7 +8,6 @@ from eralchemy import render_er
 
 Base = declarative_base()
 
-
 # Define association tables to create a many to many for the favorites
 favorites_people = Table('user_people', Base.metadata,
     Column('user_id', Integer, ForeignKey('users.id')),
@@ -69,9 +68,6 @@ class Planets(Base):
     name = Column(String(50), nullable=False)
     photo_url: Column(String)
  
-    def to_dict(self):
-        return {}
-
 class Starships(Base):
     __tablename__ = 'starships'
     # Here we define columns for the Starships   
